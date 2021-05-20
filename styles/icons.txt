@@ -1,0 +1,25 @@
+Icons from Font Awesome
+
+Kit Code:
+<script src="https://kit.fontawesome.com/f13fc92f13.js" crossorigin="anonymous"></script>
+
+Hamburger Icon:
+<i class="fas fa-bars"></i>
+
+Exit:
+<i class="fas fa-times"></i>
+
+Cheers (Logo):
+<i class="fas fa-glass-cheers"></i>
+
+Whiskey:
+<i class="fas fa-glass-whiskey"></i>
+
+Magic:
+<i class="fas fa-magic"></i>
+
+War:
+<i class="fas fa-khanda"></i>
+
+Receipt:
+<i class="fas fa-receipt"></i>
