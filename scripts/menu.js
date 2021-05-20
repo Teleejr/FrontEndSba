@@ -82,8 +82,7 @@ function addToCartClicked(event) {
   addItemToCart(title, price, type);
   updateCartTotal();
   
-
-}
+}//end addToCartClicked
 
 //Add selected items to the cart
 function addItemToCart(title, price, type) {
@@ -103,9 +102,9 @@ function addItemToCart(title, price, type) {
   //Use html code to actually create the contents
   let cartRowContents = `
     <div class="cart-item cart-column">
-      <span class="cart-item-title">${title}</span>
+      <span class="cart-item-title" style = "font-weight: 700;">${title}</span>
     </div>
-    <span class = cart-item-type">${type}</span>
+    <span class = cart-item-type cart-column" style="border-bottom: 1px solid black;">${type}</span>
     <span class="cart-price cart-column">${price}</span>
       <div class="cart-quantity cart-column">
       <input class="cart-quantity-input" type="number" value="1">
@@ -142,59 +141,9 @@ function updateCartTotal() {
     let price = parseFloat(priceElement.innerText.replace('$', ''));
     let quantity = quantityElement.value;
     total = total + (price * quantity);
-    }//end for
+  }//end for
   
     //Round total to the nearest 2 decimal places
     total = Math.round(total * 100) / 100;
     document.getElementsByClassName('cart-total-price')[0].innerText = '$' + total + '.00';
 }//end updateCartTotal
-
-
-
-
-
-
-
-
-
-//Regex validation for email
-function validateEmail(email) {
-  const regex = new Regex(/^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0 - 9]{ 1, 3}\.[0 - 9]{ 1, 3 } \.[0 - 9]{ 1, 3 } \])| (([a - zA - Z\-0 - 9] +\.) +[a - zA - Z]{ 2,})) $ /);
-  return regex.test(String(email).toLowerCase());
-}//validateEmail
-
-
-
-//Code for Form functionality
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// const variables for drop down menu for small screens
-const toggle = document.querySelector('.test');
-const menu = document.querySelector('.menu');
-const viewTab = document.querySelector('.viewTab');
-//toggle menu function
-function toggleMenu(){
-    alert('Item has been added');
-}
-
-function openTab(){
-    $('button').bind({
-      click: function () {
-        $('p').slideToggle();
-      },
-    });
-}
-
-//check for click on menu icon
